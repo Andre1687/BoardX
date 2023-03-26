@@ -1,0 +1,66 @@
+<div>
+  <nav>
+    <h1 routerLink="/">List Project</h1>
+    <!-- Button for menu -->
+    <button mat-icon-button [mat-menu-trigger-for]="menu" class="hamMenu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <!-- Material menu that shows when pressing the button above -->
+    <mat-menu #menu="matMenu">
+      <button
+        mat-menu-item
+        routerLink="contact"
+      >
+        Contact
+      </button>
+
+      <!-- Button for login, waits with
+        !(afAuth.user | async)
+        to see if there is no user -->
+      <button
+        *ngIf="!(afAuth.user | async)"
+        mat-menu-item
+        routerLink="login"
+      >
+        🚪
+        Log in
+      </button>
+
+      <!-- routerlink is used to navigate
+      and makes a call at the routing module -->
+      <button
+        *ngIf="afAuth.user | async"
+        mat-menu-item
+        routerLink="profile"
+      >
+        👤
+        Profile
+      </button>
+    </mat-menu>
+
+
+    <div class="actions">
+      <button mat-stroked-button routerLink="contact">Contact</button>
+      <button
+          *ngIf="!(afAuth.user | async)"
+          mat-flat-button
+          routerLink="login"
+        >
+        🚪
+        Log in
+      </button>
+
+      <button
+          *ngIf="afAuth.user | async"
+          mat-flat-button
+          routerLink="profile"
+        >
+        👤
+        Profile
+      </button>
+    </div>
+  </nav>
+  <!-- Here the other components are renderized
+  goes hand on hand with <router-outlet></router-outlet> -->
+  <ng-content></ng-content>
+</div>

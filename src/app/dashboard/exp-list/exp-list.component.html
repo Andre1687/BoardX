@@ -1,0 +1,44 @@
+<mat-expansion-panel>
+
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{list.title}}
+    </mat-panel-title>
+
+    <mat-panel-description>
+      <!-- {{list.date.toDate() | date: 'MM/dd/yy - HH:mm'}} -->
+      {{list.date.toDate() | date: 'MM/yy - HH:mm:SS'}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <div
+    class="cont"
+    cdkDropList
+    (cdkDropListDropped)="drop($event)"
+  >
+
+    <app-element
+      class="element"
+      cdkDrag
+      *ngFor="let element of list.elements"
+      [element]="element"
+    >
+
+      {{element.text}}
+    </app-element>
+
+    <button matRipple class="addBtn" (click)="addElement()">
+    <mat-icon>add</mat-icon>
+      Add element
+    </button>
+
+  </div>
+  <div class="actions">
+    <button style="margin-left: auto;" mat-icon-button>
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button (click)="deleteTable()">
+      <mat-icon [color]="'warn'">delete</mat-icon>
+    </button>
+  </div>
+</mat-expansion-panel>

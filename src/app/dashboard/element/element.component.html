@@ -1,0 +1,23 @@
+<mat-card
+  class="element"
+  [style]="
+    '--colorVar: ' + element.color + ';'+
+    '--progVar: ' + element.prog + '%;'
+    "
+>
+  <div class="prog"></div>
+  <p class="text">
+    {{element.text}}
+  </p>
+  <mat-checkbox
+    style="margin-left: auto;"
+    *ngIf="element.type == 'check'"
+    (change)="onCheckChange()"
+    [(ngModel)]="element.checked"
+  >
+  </mat-checkbox>
+  <div class="elemMenu">
+    <button mat-icon-button (click)="editElement()"><mat-icon>edit</mat-icon></button>
+    <button mat-icon-button (click)="deleteElement()"><mat-icon class="red">delete</mat-icon></button>
+  </div>
+</mat-card>

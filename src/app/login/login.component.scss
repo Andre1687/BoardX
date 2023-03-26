@@ -1,0 +1,29 @@
+main {
+  height: calc(100vh - 44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    svg {
+      z-index: -5;
+      position: absolute;
+    }
+}
+
+.login {
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  button {
+    width: max-content;
+    svg {
+      position: inherit;
+    }
+  }
+}
+
+.blob {
+  width: 400px;
+  aspect-ratio: 1;
+}

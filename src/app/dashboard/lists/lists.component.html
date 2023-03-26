@@ -1,0 +1,44 @@
+<main>
+  <h1>List group</h1>
+
+  <button mat-raised-button class="btn-add" (click)="add()">
+    <mat-icon>add</mat-icon>
+    Add list
+  </button>
+
+  <div
+      class="cont-lists"
+      cdkDropListOrientation="horizontal"
+      cdkDropList
+      (cdkDropListDropped)="drop($event)"
+    >
+
+      <app-list
+         class="list"
+         *ngFor="let list of lists"
+         cdkDrag
+         [list]="list"
+      >
+         <mat-icon cdkDragHandle class="dragHandle">drag_indicator</mat-icon>
+      </app-list>
+  </div>
+
+
+
+
+  <mat-accordion
+    (cdkDropListDropped)="drop($event)"
+    class="acord-lists"
+    cdkDropList
+    multi
+  >
+    <app-exp-list
+      class="acord-list"
+      *ngFor="let list of lists"
+      cdkDrag
+      [list]="list"
+    >
+    </app-exp-list>
+
+  </mat-accordion>
+</main>

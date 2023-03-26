@@ -1,0 +1,108 @@
+<div class="home">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-title">
+        <h1>Kanban Board Built with Angular</h1>
+        <p mat-card-subtitle style="color: white;">Codebase exclusively for testing and demonstration.</p>
+        <button class="btn-contenido" mat-stroked-button>Content of project</button>
+        <button mat-raised-button routerLink="dash">📑Dashboard</button>
+      </div>
+      <div class="hero-img" cdkDropList>
+        <img class="tables-png" src="../../assets/tables.png" alt="">
+        <div class="tables-def">
+
+        </div>
+        <mat-card class="hero-card" cdkDrag>
+          <div class="card-title" matCardTitle>
+            <h1>Core technologies used</h1>
+            <mat-icon class="card-handle" cdkDragHandle>drag_indicator</mat-icon>
+          </div>
+
+          <div class="cont" matCardContent>
+            <!-- Array of cards -->
+            <!-- filter of logos with (changes) and toggleing -->
+            <mat-card *ngFor="let element of listData">
+              {{element.label}}
+
+              <mat-checkbox (change)="toggleImg(element.value)" class="check"></mat-checkbox>
+            </mat-card>
+
+            <div class="add-btn" matRipple>
+              <mat-icon>
+                add
+              </mat-icon>
+              Add element
+            </div>
+          </div>
+        </mat-card>
+
+        <div class="imgs">
+          <img class="logo" [ngClass]="angular ? 'selected' : ''" src="../../assets/svgs/Angular-logo.svg" alt="logo" width="80" height="80">
+          <img class="logo" [ngClass]="firebase ? 'selected' : ''" src="../../assets/svgs/firebase-logo.svg" alt="logo" width="75" height="75">
+          <img class="logo" [ngClass]="material ? 'selected' : ''" src="../../assets/svgs/material.svg" alt="logo" width="70" height="70" style="margin-top: .5rem;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about-this">
+    <div class="about-list">
+      <mat-card class="about-card">
+        <h1>Diciplines and attributes</h1>
+        <div class="inner-about-list" cdkDropList (cdkDropListDropped)="drop($event)">
+          <mat-card
+            cdkDrag
+            *ngFor="let element of diciplines"
+            class="dicipline"
+          >
+            <mat-icon class="card-priority-handle" cdkDragHandle>drag_indicator</mat-icon>
+            {{element}}
+          </mat-card>
+        </div>
+      </mat-card>
+    </div>
+    <div id="about-inner">
+      <!-- <h1>This Kanban board project was built using Firebase & Angular</h1>
+      <h3 id="about-text">
+        (Kanban is a visual project management system that helps individuals and teams to track their progress in real-time.)
+      </h3>
+      <h3 id="about-text">
+        Using Firebase allowed to easily store and retrieve the project data in real-time, while Angular provided a solid
+        framework for building the front-end
+        of the project.
+      </h3>
+      <h3 id="about-text">
+        The board was designed with a user-friendly interface that allows users to create and organize
+        their tasks, as well as drag and drop them into different stages of the project.
+        By incorporating Firebase and Angular
+        into the project, I was able to showcase my ability to integrate different technologies to create a seamless user
+        experience.
+      </h3> -->
+
+      <h1>This project was built using Firebase</h1>
+      <h3 id="about-text">
+        The board was designed with a user-friendly interface that allows users to create and organize
+        their tasks, as well as drag and drop them into different stages of the project.
+        By incorporating Firebase into the project, I was able to easily store and retrieve the project data in real-time,
+        and showcase my ability to integrate different technologies to create a seamless user
+        experience.
+      </h3>
+
+      <!-- <h1>Project built with Firebase</h1>
+      <h3 id="about-text">
+        Using Firebase allowed to easily store and retrieve the project data in real-time, while Angular provided a solid
+        framework for building the front-end
+        of the project.
+      </h3>
+      <h3 id="about-text">
+        The board was designed with a user-friendly interface that allows users to create and organize
+        their tasks, as well as drag and drop them into different stages of the project.
+        By incorporating Firebase and Angular
+        into the project, I was able to showcase my ability to integrate different technologies to create a seamless user
+        experience.
+      </h3> -->
+      <button mat-raised-button>Contact</button>
+    </div>
+  </div>
+
+</div>
+

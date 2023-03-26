@@ -1,0 +1,17 @@
+<main>
+  <div class="profile" *ngIf="usrProfile">
+    <h1>Welcome {{usrProfile.displayName}}</h1>
+    <img alt="profile" [src]="usrProfile.photoURL" style="border-radius: 50%;">
+    <h3>{{usrProfile.email}}</h3>
+    <div class="actions">
+      <button
+        mat-flat-button
+        [color]="'warn'"
+        (click)="signOut()">
+
+        Exit
+      </button>
+      <button mat-raised-button routerLink="/dash">Dashboard</button>
+    </div>
+  </div>
+</main>

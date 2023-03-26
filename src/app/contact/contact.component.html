@@ -1,0 +1,205 @@
+<div class="main">
+  <!-- <div class="wrapper">
+    <mat-card>
+      <h1 matCardTitle>First form</h1>
+      <form [formGroup]="firstForm" class="form">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="text" formControlName="email">
+          <mat-error>Input invalid</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput type="password" autocomplete="off" formControlName="password">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Select</mat-label>
+          <mat-select>
+            <mat-option value="Fruit">Fruit</mat-option>
+            <mat-option value="Veggies">Veggies</mat-option>
+            <mat-option value="Cereal">Cereal</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </form>
+
+      <mat-radio-group [(ngModel)]="valueForRadio">
+        <mat-radio-button value="1">Option 1</mat-radio-button>
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+        <mat-radio-button value="3">Option 3</mat-radio-button>
+      </mat-radio-group>
+      <button mat-raised-button (click)="valueForRadio = undefined">Restart</button>
+
+      <mat-button-toggle-group>
+        <mat-button-toggle>Male</mat-button-toggle>
+        <mat-button-toggle>Woman</mat-button-toggle>
+        <mat-button-toggle>Other</mat-button-toggle>
+      </mat-button-toggle-group>
+
+      <div class="actions">
+        <button mat-stroked-button (click)="cancelForm()">Cancel</button>
+        <button mat-raised-button (click)="sendForm()" [disabled]="!firstForm.valid">Send</button>
+      </div>
+    </mat-card>
+  </div> -->
+
+  <div id="container1" class="clearfix">
+    <div id="title">
+      <h1>For any inquiries, feel free to get in touch</h1>
+      <p>Whether you're looking to start a new project, schedule a meeting, or simply say hello, rest assured, I'll get back to
+      you at the earliest possible convenience.</p>
+    </div>
+
+    <form action="index.html" method="post">
+      <fieldset>
+
+        <legend>Contact Information</legend>
+        <br>
+        <br>
+
+        <div id="flex">
+          <div class="row">
+            <label class="right" for="Full_Name">Name</label>
+            <input class="left" type="text" id="Full_Name" name="user_name" placeholder="Required">
+          </div>
+
+          <div class="row">
+            <label class="right" for="Email_Address">Email Address</label>
+            <input class="left" type="email" id="Email_Address" name="user_email" placeholder="Required">
+          </div>
+
+          <div class="row">
+            <label class="right" for="Phone_Number">Phone Number</label>
+            <input class="left" type="tel" id="Phone_Number" name="user_phone">
+          </div>
+
+          <div class="row">
+            <label class="right" for="Street_Address">Address</label>
+            <input class="left" type="text" id="Street_Address" name="user_street">
+          </div>
+
+          <div class="row">
+            <label class="right" for="City">City</label>
+            <input class="left" type="text" id="City" name="user_city">
+          </div>
+
+          <div class="row">
+            <label class="right" for="State">State</label>
+            <select class="left" id="State" name="user_state">
+              <option selected hidden disabled id="font">Choose State</option>
+              <option value="AL">AL</option>
+              <option value="AK">AK</option>
+              <option value="AZ">AZ</option>
+              <option value="AR">AR</option>
+              <option value="CA">CA</option>
+              <option value="CO">CO</option>
+              <option value="CT">CT</option>
+              <option value="DE">DE</option>
+              <option value="DC">DC</option>
+              <option value="FL">FL</option>
+              <option value="GA">GA</option>
+              <option value="HI">HI</option>
+              <option value="ID">ID</option>
+              <option value="IL">IL</option>
+              <option value="IN">IN</option>
+              <option value="IA">IA</option>
+              <option value="KS">KS</option>
+              <option value="KY">KY</option>
+              <option value="LA">LA</option>
+              <option value="ME">ME</option>
+              <option value="MD">MD</option>
+              <option value="MA">MA</option>
+              <option value="MI">MI</option>
+              <option value="MN">MN</option>
+              <option value="MS">MS</option>
+              <option value="MO">MO</option>
+              <option value="MT">MT</option>
+              <option value="NE">NE</option>
+              <option value="NV">NV</option>
+              <option value="NH">NH</option>
+              <option value="NJ">NJ</option>
+              <option value="NM">NM</option>
+              <option value="NY">NY</option>
+              <option value="NC">NC</option>
+              <option value="ND">ND</option>
+              <option value="OH">OH</option>
+              <option value="OK">OK</option>
+              <option value="OR">OR</option>
+              <option value="PA">PA</option>
+              <option value="RI">RI</option>
+              <option value="SC">SC</option>
+              <option value="SD">SD</option>
+              <option value="TN">TN</option>
+              <option value="TX">TX</option>
+              <option value="UT">UT</option>
+              <option value="VT">VT</option>
+              <option value="VA">VA</option>
+              <option value="WA">WA</option>
+              <option value="WV">WV</option>
+              <option value="WI">WI</option>
+              <option value="WY">WY</option>
+              <option value="AS">AS</option>
+              <option value="GU">GU</option>
+              <option value="PR">PR</option>
+              <option value="UM">UM</option>
+              <option value="VI">VI</option>
+            </select>
+          </div>
+
+          <!-- <div class="row">
+            <label class="right" for="Zip_Code">Zip Code</label>
+            <br>
+            <input type="text" id="Zip_Code" name="user_zip">
+          </div> -->
+        </div>
+
+      </fieldset>
+      <br>
+      <fieldset>
+
+        <legend id="spacing">How did you find this site?</legend>
+        <br>
+        <p>(Not required but helps to improve outreach methods)</p>
+
+        <input type="radio" id="HTML_News" value="HTML_News" name="radio">
+        <label for="HTML_News">linkedIn</label>
+        <br>
+        <br>
+        <input type="radio" id="CSS_News" value="CSS_News" name="radio">
+        <label for="CSS_News">Google</label>
+        <br>
+        <br>
+        <input type="radio" id="Javascript_News" value="Javascript_News" name="radio">
+        <label for="Javascript_News">Github</label>
+        <br>
+        <br>
+
+        <!-- <p>Newsletter format</p> -->
+
+        <input type="radio" id="HTML" value="html" name="radio">
+        <label for="HTML" class="">Social Media</label>
+        <br>
+        <br>
+
+        <input type="radio" id="Plain_text" value="plain_text" name="radio">
+        <label for="Plain_text" class="">Other</label>
+        <br>
+        <br>
+        <br>
+
+        <label for="Text">A little more about your inqury:</label>
+        <br>
+        <br>
+        <textarea id="Text">
+                      </textarea>
+        <br>
+        <br>
+
+        <button type="submit">Submit</button>
+
+      </fieldset>
+    </form>
+  </div>
+</div>

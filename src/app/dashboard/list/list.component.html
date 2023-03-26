@@ -1,0 +1,35 @@
+<mat-card class="list">
+  <div matCardTitle class="title">
+    <ng-content></ng-content>
+    <h1>
+      {{list.title}}
+    </h1>
+    <button class="trig" mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="editTitle()"><mat-icon>edit</mat-icon>Edit</button>
+      <button mat-menu-item class="red" (click)="deleteTable()">
+        <mat-icon class="red">delete</mat-icon>
+        Delete
+      </button>
+    </mat-menu>
+  </div>
+  <div class="listElements" cdkDropList (cdkDropListDropped)="drop($event)">
+    <app-element
+      cdkDrag
+      *ngFor="let element of list.elements; let i = index"
+      class="element"
+      [element]="element"
+      [index]="i"
+      (checkChange)="checkChange()"
+      (deleteItem)="deleteElement($event)"
+      (updateItem)="editElement($event)"
+    >
+
+    </app-element>
+  </div>
+  <button matRipple class="addBtn" (click)="addElement()">
+    <mat-icon>add</mat-icon>
+    Add element
+  </button>
+  <p matCardSubtitle class="index">{{list.index}}</p>
+</mat-card>
