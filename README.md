@@ -1,10 +1,29 @@
-# ListProject
+# BoardX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+A kanban like board designed with a user-friendly interface that allows users to create and organize their tasks, as well as drag and drop them into different stages of the project.
+(This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.)
 
-## Development server
+## Technologies Used
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Angular
+- Angular Material
+- Firebase
+
+## Installation
+
+1. Clone this repository: `git clone https://github.com/your-username/your-repository.git`
+2. Install dependencies: `npm install`
+
+## Configuration
+
+1. Create a Firebase account and a new project.
+2. Copy Firebase credentials into `src/environments/environment.ts` and `src/environments/environment.prod.ts`.
+3. Configure Firebase security rules according to your needs.
+
+## Usage
+
+1. Run the development server: `ng serve`
+2. Open your browser at `http://localhost:4200/`
 
 ## Code scaffolding
 
