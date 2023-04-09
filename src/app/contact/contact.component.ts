@@ -15,21 +15,7 @@ export class ContactComponent implements OnInit {
   constructor(private contact: EmailService) { }
 
   ngOnInit(): void {
-    this.contact.sendEmail({
-      message: "texto que yo quiera",
-      email: "cualquier@hotmail.com"
-    }).subscribe((res)=>{
-      return console.log(res)
-    })
 
-    this.firstForm = new FormGroup({
-      email: new FormControl(null, [Validators.email, Validators.required]),
-      password: new FormControl(null, [Validators.minLength(6), Validators.required])
-    })
-
-    this.firstForm.valueChanges.subscribe(res=>{
-      console.log(res)
-    })
   }
 
   get email(){

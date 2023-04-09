@@ -10,6 +10,7 @@
       <button
         mat-menu-item
         routerLink="contact"
+        *ngIf="showBtnContact"
       >
         Contact
       </button>
@@ -40,7 +41,13 @@
 
 
     <div class="actions">
-      <button mat-stroked-button routerLink="contact">Contact</button>
+      <button
+        mat-stroked-button
+        routerLink="contact"
+        *ngIf="showBtnContact"
+      >
+        Contact
+      </button>
       <button
           *ngIf="!(afAuth.user | async)"
           mat-flat-button

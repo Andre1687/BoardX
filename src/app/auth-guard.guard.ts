@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class AuthGuardGuard implements CanActivate {
 
 // Imports dependency to authenticate user.
-constructor(private afAuth: AngularFireAuth) {}
+constructor(private afAuth: AngularFireAuth, private _router: Router) {}
 
   // canActivate function is implemented.
   // Returns true or false depending of the login state of the user.
@@ -20,6 +20,10 @@ constructor(private afAuth: AngularFireAuth) {}
     const user = await this.afAuth.currentUser
     // Converts to a boolean with double negation !!.
     const isLoggedIn = !!user
+
+    if (!isLoggedIn) {
+      this._router.navigate(['login'])
+    }
 
     // Return the value.
     return isLoggedIn;

@@ -4,7 +4,11 @@
       <div class="hero-title">
         <h1>Kanban Board Built with Angular</h1>
         <p mat-card-subtitle style="color: white;">Codebase exclusively for testing and demonstration.</p>
-        <button class="btn-contenido" mat-stroked-button>Content of project</button>
+        <a href="#about">
+          <button class="btn-content-arrow" mat-stroked-button>Content of project
+            <mat-icon>expand_more</mat-icon>
+          </button>
+        </a>
         <button mat-raised-button routerLink="dash">📑Dashboard</button>
       </div>
       <div class="hero-img" cdkDropList>
@@ -78,7 +82,7 @@
         experience.
       </h3> -->
 
-      <h1>This project was built using Firebase</h1>
+      <h1 id="about">This project was built using Firebase</h1>
       <h3 id="about-text">
         The board was designed with a user-friendly interface that allows users to create and organize
         their tasks, as well as drag and drop them into different stages of the project.
@@ -100,7 +104,7 @@
         into the project, I was able to showcase my ability to integrate different technologies to create a seamless user
         experience.
       </h3> -->
-      <button mat-raised-button>Contact</button>
+      <button routerLink="contact" mat-raised-button>Contact</button>
     </div>
   </div>
 
