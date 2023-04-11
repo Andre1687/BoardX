@@ -61,6 +61,17 @@ p {
   padding: 0 5px 0 5px;
 }
 
+form {
+  padding: 2px 0 100px 0;
+}
+
+legend {
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  float: left;
+  width: 100%;
+}
 
 
 
@@ -68,148 +79,45 @@ p {
 
 
 
+fieldset {
+  border: none;
+}
 
+#flex {
+  padding-left: 10px;
+}
+
+.email {
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+.phone {
+  padding-left: 7px;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+  font-size: 15px;
+}
 
 .bubbles {
   display: flex;
   gap: 2rem;
+  padding-top: 25px;
   svg {
     scale: 1.5;
   }
 }
 
-/* ------------------------- END OF TITLE ------------------------- */
-/* ------------------------- START OF FORM ------------------------- */
-form {
-  padding: 2px 0 100px 0;
+img {
+  height: 35px;
+  width: 35px;
+  margin-top: -7px;
+  margin-right: -5px;
+  border-radius: 3px;
 }
-
-fieldset {
-  border: none;
-  border-top: 2px solid black;
-  margin: 0 10px 0 10px;
-  padding: 25px 0 5px 0;
-}
-
-legend {
-  font-size: 18px;
-  font-weight: bolder;
-  float: left;
-  width: 100%;
-}
-
-input[type=text] {
-  width: 100%;
-  margin: 20px 0;
-  padding: 10px 50px 10px 10px;
-  background-color: #EBEBEB;
-  border: none;
-  border-radius: 4px;
-}
-
-input[type=email] {
-  width: 100%;
-  margin: 20px 0;
-  padding: 10px 50px 10px 10px;
-  background-color: #EBEBEB;
-  border: none;
-  border-radius: 4px;
-}
-
-input[type=tel] {
-  width: 100%;
-  margin: 20px 0;
-  padding: 10px 50px 10px 10px;
-  background-color: #EBEBEB;
-  border: none;
-  border-radius: 4px;
-}
-
-select {
-  width: 100%;
-  margin: 20px 0;
-  padding: 10px 50px 10px 10px;
-  background-color: #EBEBEB;
-  color: #9EA1A4;
-  border: none;
-  border-radius: 4px;
-}
-
-#Zip_Code {
-  width: 50%;
-}
-
-input[type=checkbox] {
-  margin-right: 10px;
-}
-
-input[type=radio] {
-  margin-right: 10px;
-}
-
-textarea {
-  resize: none;
-  width: 100%;
-  height: 100px;
-  background-color: #EBEBEB;
-  border: none;
-  border-radius: 4px;
-}
-
-
-
-/* ---------- PLACEHOLDER START ---------- */
-
-input::placeholder {
-  color: grey;
-  opacity: 0.4;
-  text-align: right;
-  font-style: italic;
-}
-
-/* ---------- PLACEHOLDER ENDD ---------- */
-/* ---------- FOCUS START ---------- */
-
-input:focus {
-  border: 1px solid #106AA9;
-  border-radius: 4px;
-}
-
-select:focus {
-  border: 1px solid #106AA9;
-  border-radius: 4px;
-}
-
-textarea:focus {
-  border: 1px solid #106AA9;
-  border-radius: 4px;
-}
-
-/* ---------- FOCUS ENDD ---------- */
-
-
-
-button {
-  color: #fff;
-  background-color: #49C5B5;
-  font-size: 18px;
-  text-align: center;
-  border-radius: 5px;
-  width: 100%;
-  padding: 15px 30px 15px 30px;
-
-}
-
-#copyright {
-  font-style: oblique;
-  text-align: center;
-  font-size: 15px;
-  color: lightgrey;
-  padding-top: 10px
-
-}
-
-
 
 
 
@@ -237,10 +145,6 @@ button {
     width: 25%;
   }
 
-  #Zip_Code {
-    width: 25%;
-  }
-
   #spacing {
     padding-bottom: 25px;
   }
@@ -248,222 +152,24 @@ button {
 
 
 
-}
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Merriweather', serif;
-}
-
-.clearfix {
-    content:'';
-    display: block;
-    clear: both;
-}
-
-header {
-  color: #fff;
-  background-color: #142840;
-  text-transform: uppercase;
-  font-size: 20px;
-  padding: 35px 0 30px 0;
-  height: 100px;
-  text-align: center;
-}
-
-#container1 {
-  max-width: 600px;
-  margin: auto;
-}
-
-#title {
-  text-align: center;
-  padding: 20px 0 20px 0;
-  border-bottom: 4px solid black;
-  margin: 0 10px 0 10px;
-}
-
-h1 {
-  font-size: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-p,
-label {
-  color: grey;
-  font-size: 15px;
-}
-
-p {
-  padding: 0 5px 0 5px;
-}
-
-
-
-
-
-/* ------------------------- ENDD OF TITLE ------------------------- */
-/* ------------------------- START OF FORM ------------------------- */
-form {
-  padding: 2px 0 100px 0;
-}
-
-fieldset {
-  border: none;
-  border-top: 2px solid black;
-  margin: 0 10px 0 10px;
-  padding: 25px 0 5px 0;
-}
-
-legend {
-  font-size: 18px;
-  font-weight: bolder;
-  float: left;
-  width: 100%;
-}
-
-input[type=text] {
-  width: 100%;
-  margin: 20px 0;
-  padding: 10px 50px 10px 10px;
-  background-color: #EBEBEB;
-  border: none;
-  border-radius: 4px;
-}
-
-input[type=email] {
-  width: 100%;
-  margin: 20px 0;
-  padding: 10px 50px 10px 10px;
-  background-color: #EBEBEB;
-  border: none;
-  border-radius: 4px;
-}
-
-input[type=tel] {
-  width: 100%;
-  margin: 20px 0;
-  padding: 10px 50px 10px 10px;
-  background-color: #EBEBEB;
-  border: none;
-  border-radius: 4px;
-}
-
-select {
-  width: 100%;
-  margin: 20px 0;
-  padding: 10px 50px 10px 10px;
-  background-color: #EBEBEB;
-  color: #9EA1A4;
-  border: none;
-  border-radius: 4px;
-}
-
-#Zip_Code {
-  width: 50%;
-}
-
-input[type=checkbox] {
-  margin-right: 10px;
-}
-
-input[type=radio] {
-  margin-right: 10px;
-}
-
-textarea {
-  resize: none;
-  width: 100%;
-  height: 100px;
-  background-color: #EBEBEB;
-  border: none;
-  border-radius: 4px;
-}
-
-
-
-/* ---------- PLACEHOLDER START ---------- */
-
-input::placeholder {
-  color: grey;
-  opacity: 0.4;
-  text-align: right;
-  font-style: italic;
-}
-
-/* ---------- PLACEHOLDER ENDD ---------- */
-/* ---------- FOCUS START ---------- */
-
-input:focus {
-  border: 1px solid #106AA9;
-  border-radius: 4px;
-}
-
-select:focus {
-  border: 1px solid #106AA9;
-  border-radius: 4px;
-}
-
-textarea:focus {
-  border: 1px solid #106AA9;
-  border-radius: 4px;
-}
-
-/* ---------- FOCUS ENDD ---------- */
-
-
-
-button {
-  color: #fff;
-  background-color: #49C5B5;
-  font-size: 18px;
-  text-align: center;
-  border-radius: 5px;
-  width: 100%;
-  padding: 15px 30px 15px 30px;
-
-}
-
-
-
-
-
-
-/* ------------------------- MEDIA QUERIE ------------------------- */
-
-@media (min-width: 768px) {
+  legend {
+    padding-left: 10px;
+    margin-top: 5px;
+  }
 
   #flex {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    padding-left: 10px;
   }
 
-  .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  .email {
+    margin-left: -33px;
+    text-decoration: none;
   }
 
-  .left {
-    flex: 2;
+  .phone {
+    margin-left: -30px;
+    text-decoration: none;
   }
-
-  .right {
-    width: 25%;
-  }
-
-  #Zip_Code {
-    width: 25%;
-  }
-
-  #spacing {
-    padding-bottom: 25px;
-  }
-
 
 
 

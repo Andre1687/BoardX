@@ -220,15 +220,15 @@ align-items: center;
     display: none;
   }
 
-  .tables-def {
-    content: url('../../assets/tables-def.png');
-    width: 200px;
-    position: absolute;
-    z-index: 222;
-    bottom: -6.5rem;
-    left: 6rem;
-    rotate: 15deg;
-  }
+  // .tables-def {
+  //   content: url('../../assets/tables-def.png');
+  //   width: 200px;
+  //   position: absolute;
+  //   z-index: 222;
+  //   bottom: -6.5rem;
+  //   left: 6rem;
+  //   rotate: 15deg;
+  // }
 
   .about-this {
     flex-direction: column-reverse;
